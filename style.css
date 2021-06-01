@@ -105,3 +105,30 @@
     width: 100%;
     height: 100%;
 }
+.get__started {
+    width: 380px;
+    height: 150px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+.get__started p {
+    font-family: var(--headings-font);
+    margin-bottom: 20px;
+}
+.get__started button {
+    background-color: var(--button-color);
+    color: white;
+    padding: 10px 40px;
+    border: none;
+    border-radius: 10px;
+}
+footer {
+    background-color: hsl(192, 100%, 9%);
+    color: white;
+}
