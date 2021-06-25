@@ -1,6 +1,9 @@
 :root {
     --button-color: hsl(322, 100%, 66%);
+    --button-hover: hsl(322, 95%, 76%);
     --paragraph-color: hsl(208, 11%, 55%);
+    --headings-color: hsl(192, 100%, 9%);
+    --bg-color: hsl(193, 100%, 96%);
     --headings-font:'Poppins', sans-serif ;
     --body-font: 'Open Sans', sans-serif;
 }
@@ -8,10 +11,15 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-size: 18px;
+}
+.body {
+    position: relative;
 }
 .intro {
     background-image: url(./images/bg-hero-desktop.svg);
     height: 100vh;
+    background-color: var(--bg-color);
 }
 .heading {
     width: 100%;
@@ -40,9 +48,12 @@
 }
 .container__desc {
     width: 100%;
-    height: 1366px;
-    justify-content: start;
-    align-items: center;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    transform: translateY(-20%);
     padding-right: 60px;
 
 }
@@ -51,16 +62,20 @@
     font-size: 2rem;
 }
 .container__desc p {
-    padding: 20px 0;
+    padding: 30px 0;
     font-family: var(--body-font);
 }
 .container__desc button {
     background-color: var(--button-color);
     color: white;
-    padding: 10px 40px;
-    border-radius: 22px;
-    border: 1px solid var(--button-color);
+    padding: 20px 42px;
+    border-radius: 32px;
+    border: none;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.container__desc button:hover {
+    background-color: var(--button-hover);
+    border: none;
 
 }
 .container__img {
@@ -73,21 +88,22 @@
 /*SECTION 2*/
 .cards__container {
     padding: 0 70px;
-    margin: 60px 0;
+    margin: 60px 0 200px 0;
 }
 .card {
     width: 100%;
-    height: 400px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 60px;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     margin-bottom: 30px;
     padding: 30px 30px 30px 60px;
 }
 .card__desc {
     width: 100%;
-    height: 400px;
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -96,7 +112,15 @@
 }
 .card__desc h2 {
     margin-bottom: 20px;
+    font-size: 24px;
+    font-family: var(--headings-font);
+    color: var(--headings-color);
 }
+.card__desc p {
+    font-family: var(--body-font);
+    color: var(--paragraph-color);
+}
+
 .card__img {
     width: 100%;
     height: 100%;
@@ -104,9 +128,10 @@
 .card__img img {
     width: 100%;
     height: 100%;
+    object-fit: contain;
 }
 .get__started {
-    width: 380px;
+    width: 500px;
     height: 150px;
     border: none;
     border-radius: 10px;
@@ -115,11 +140,18 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
+    padding: 0 auto;
+    position: absolute;
+    left: 50%;
+    top: 2800px;
+    transform: translateX(-50%);
+    background-color: white;
 }
 .get__started p {
     font-family: var(--headings-font);
     margin-bottom: 20px;
+    color: var(--headings-color);
+    font-size: 24px;
 }
 .get__started button {
     background-color: var(--button-color);
@@ -131,8 +163,22 @@
 footer {
     background-color: hsl(192, 100%, 9%);
     color: white;
+    padding: 100px 60px 30px 60px;
+    
 }
-
+.footer__logo {
+    background-color: white;
+    margin-bottom: 30px;
+}
+.footer__wrapper {
+    display: grid;
+    grid-template-columns: 40% 20% 20% 20%;
+    grid-template-rows: 1fr;
+}
+.footer__contact div {
+    display: flex;
+    margin-bottom: 30px;
+}
 @media only screen and (max-width:768px) {
     .heading {
         padding: 30px 30px;
