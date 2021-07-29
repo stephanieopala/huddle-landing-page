@@ -6,6 +6,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@600&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="./style.css">
   <title>Frontend Mentor | Huddle landing page with alternating feature blocks</title>
 </head>
@@ -90,38 +91,38 @@
     <div class="footer__wrapper">
       <div class="footer__contact"> 
         <div>
-          <img src="./images/icon-location.svg" alt="location">
+          <img class="contact__icon" src="./images/icon-location.svg" alt="location">
           <p> 
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
           incididunt ut labore et dolore magna aliqua
           </p>
         </div>
         <div>
-          <img src="./images/icon-phone.svg" alt="phone">
+          <img class="contact__icon" src="./images/icon-phone.svg" alt="phone">
           <p> +1-543-123-4567</p>
         </div>
         <div>
-          <img src="./images/icon-email.svg" alt="email">
+          <img class="contact__icon" src="./images/icon-email.svg" alt="email">
           <p>example@huddle.com</p>
         </div>
       </div>
   
-      <div>
-        <p>About</p>
-        <p>What We Do</p>
-        <p>FAQ</p>
-      </div>
+      <ul class="footer__list">
+        <li><a href="#"> About</a></li>
+        <li><a href="#">What We Do</a> </li>
+        <li><a href="#">FAQ</a> </li>
+      </ul>
   
-      <div>
-        <p>Career</p>
-        <p>Blog</p>
-        <p>Contact Us</p>
-      </div>
+      <ul class="footer__list">
+        <li><a href="#">Career</a> </li>
+        <li><a href="#">Blog</a> </li>
+        <li> <a href="#"> Contact Us</a></li>
+      </ul>
       
       <div>
-        <a href="#"><i></i></a>
-        <a href="#"><i></i></a>
-        <a href="#"><i></i></a>
+        <a class="social__icon" href="#"><i class="fa fa-facebook"></i></a>
+        <a class="social__icon" href="#"><i class="fa fa-twitter"></i></a>
+        <a class="social__icon" href="#"><i class="fa fa-instagram"></i></a>
         <p>  &copy; Copyright 2018 Huddle. All rights reserved.</p>
       </div>
     </div>
